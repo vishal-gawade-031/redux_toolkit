@@ -13,6 +13,7 @@ import { createSlice } from "@reduxjs/toolkit";
         state.value -=1; 
     },
     increaseby5:(state,actions)=>{
+      // console.log(typeof actions.type);
       state.value +=actions.payload;
     }
   }  
