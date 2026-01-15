@@ -1,35 +1,26 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { increment ,decrement,increaseby5} from './redux/feature/countersilce'
+import React from "react"
+import { featchVideo, fetchPhotos } from "./api/mediaApi"
 
 const App = () => {
 
-  const dispatch = useDispatch()
 
-  const count = useSelector ((state)=>state.counter.value)
-  const [num , setnum]= useState();
+
   return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={()=>{
-          dispatch(increment())
-      }}>
-        increment</button>
-      <button onClick={()=>{
-          dispatch(decrement())
-      }}>
-        decrement</button>
+ <div className="h-screen w-wull bg-amber-300 ">
+    <button className="m-5 bg-blue-400 " onClick={async ()=>{
+      const data=await fetchPhotos('dog');
+      console.log(data);      
+      
+      } }>Get Photo's </button>
 
-        <input type='number'  onChange={(e)=>{
-          setnum(e.target.value);
-        }}/>
+      <button onClick={async ()=>{
+        const data=await featchVideo('cat');
+      console.log("prenting in app.jsx",data);
+    }}>get video's</button>
 
-        <button onClick={()=>{
-            dispatch(increaseby5(Number(num)))
-        }}>increaseby5</button>
-
-    </div>
-  )
-}
+    <br />
+ 
+  </div>
+)}
 
 export default App
