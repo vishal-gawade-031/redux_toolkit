@@ -1,6 +1,6 @@
 import axios from "axios";
 const UNSPLASH_KEY = import.meta.env.VITE_UNSPLASH_KEY
-const VITE_TENOR_KEY = import.meta.env.VITE_TENOR_KEY
+// const VITE_TENOR_KEY = import.meta.env.VITE_TENOR_KEY
 const VITE_PEXLS_KEY = import.meta.VITE_PEXLS_KEY
 
 const UNSPLASH_API_URL = "https://api.unsplash.com/search/photos";
