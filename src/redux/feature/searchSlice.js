@@ -8,7 +8,7 @@ const searchSlice=createSlice({
         results:[],
         loading:false,
         error:null
-    },
+    },  
     reducers:{
         setQuery(state,action){
             state.query=action.payload
